@@ -1,0 +1,422 @@
+/* Gaya umum */
+/* Gaya CSS default untuk desktop */
+/* Misalnya, Anda dapat mengatur ukuran font dan margin untuk desktop di sini */
+body {
+    font-size: 16px;
+}
+
+/* Responsif - Tampilan tablet (ukuran layar antara 768px hingga 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Misalnya, Anda dapat mengatur ukuran font yang lebih kecil untuk tablet */
+    body {
+        font-size: 14px;
+    }
+
+    /* Perubahan lain yang Anda inginkan untuk tablet */
+}
+
+/* Responsif - Tampilan ponsel (ukuran layar kurang dari 768px) */
+@media (max-width: 767px) {
+    /* Misalnya, Anda dapat mengatur ukuran font yang lebih kecil dan mengubah tata letak elemen-elemen untuk ponsel */
+    body {
+        font-size: 12px;
+    }
+
+    /* Perubahan lain yang Anda inginkan untuk ponsel */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow:  hidden;
+}
+
+.tulisan-kiri-bawah {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+/* Gaya CSS untuk header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px; /* Tambahkan margin kiri */
+}
+
+header h1 {
+    margin: 0;
+    margin-right: 20px; /* Tambahkan margin kanan */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gaya CSS untuk kontainer */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Gaya CSS untuk navigasi (sidebar) di mode mobile */
+#sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    z-index: 1;
+    transition: left 0.3s;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    margin: 10px 0;
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Gaya CSS untuk navigasi (navbar) di mode desktop */
+#navbar {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 20px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li:hover {
+    background-color: #007BFF;
+    transition: .5s ease-in-out;
+    margin: 0;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#navbar ul li {
+    margin: 0 31px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Gaya CSS untuk konten utama */
+#content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Gaya CSS untuk tombol hamburger pada mode tablet dan handphone */
+#hamburger {
+    display: none; /* Sembunyikan tombol hamburger pada mode desktop */
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    margin: 0 5px; /* Memberikan jarak vertikal antara garis */
+    margin-right: 15px;
+    margin-bottom: 1vh;
+}
+
+/* Tampilan navigasi sidebar pada mode tablet dan handphone */
+@media (max-width: 768px) {
+    header #hamburger {
+        display: block; /* Tampilkan tombol hamburger pada mode tablet dan handphone */
+    }
+
+    #navbar.desktop {
+        display: none; /* Sembunyikan navbar pada mode tablet dan handphone */
+    }
+}
+
+
+/* Gaya CSS untuk Manajemen Sekolah */
+#manajemen-sekolah {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid tomato;
+}
+
+#manajemen-sekolah h2 {
+    color: #333;
+}
+
+#manajemen-sekolah ul {
+    list-style: none;
+}
+
+#manajemen-sekolah li {
+    margin: 10px 0;
+}
+
+#manajemen-sekolah a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#manajemen-sekolah a:hover {
+    text-decoration: underline;
+}
+
+#materi-pembelajaran {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#materi-pembelajaran h2 {
+    color: #333;
+}
+
+#materi-pembelajaran ul {
+    list-style: none;
+}
+
+#materi-pembelajaran li {
+    margin: 10px 0;
+}
+
+#materi-pembelajaran a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#materi-pembelajaran a:hover {
+    text-decoration: underline;
+}
+
+/* gaya untuk penilaian */
+#penilaian {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#penilaian h2 {
+    color: #333;
+}
+
+#penilaian ul {
+    list-style: none;
+}
+
+#penilaian li {
+    margin: 10px 0;
+}
+
+#penilaian a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#penilaian a:hover {
+    text-decoration: underline;
+}
+
+/* gaya untuk buku nilai */
+#buku-nilai {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#buku-nilai h2 {
+    color: #333;
+}
+
+#buku-nilai ul {
+    list-style: none;
+}
+
+#buku-nilai li {
+    margin: 10px 0;
+}
+
+#buku-nilai a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#buku-nilai a:hover {
+    text-decoration: underline;
+}
+
+/* gaya untuk jadwal */
+#jadwal {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#jadwal h2 {
+    color: #333;
+}
+
+#jadwal ul {
+    list-style: none;
+}
+
+#jadwal li {
+    margin: 10px 0;
+}
+
+#jadwal a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#jadwal a:hover {
+    text-decoration: underline;
+}
+
+/* gaya untuk  laporan*/
+#laporan {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#laporan h2 {
+    color: #333;
+}
+
+#laporan ul {
+    list-style: none;
+}
+
+#laporan li {
+    margin: 10px 0;
+}
+
+#laporan a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#laporan a:hover {
+    text-decoration: underline;
+}
+
+/* gaya untuk buku kerja */
+#buku-kerja {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#buku-kerja h2 {
+    color: #333;
+}
+
+#buku-kerja ul {
+    list-style: none;
+}
+
+#buku-kerja li {
+    margin: 10px 0;
+}
+
+#buku-kerja a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#buku-kerja a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya CSS untuk Manajemen Kelas */
+#manajemen-kelas {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#manajemen-kelas h2 {
+    color: #333;
+}
+
+#manajemen-kelas ul {
+    list-style: none;
+}
+
+#manajemen-kelas li {
+    margin: 10px 0;
+}
+
+#manajemen-kelas a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#manajemen-kelas a:hover {
+    text-decoration: underline;
+}
+
+/* Gaya CSS untuk section yang sedang aktif */
+section.active {
+    display: block;
+}
+
+/* Gaya CSS untuk section yang sedang tidak aktif */
+section:not(.active) {
+    display: none;
+}

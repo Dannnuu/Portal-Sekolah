@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* Pusat horizontal */
+    align-items: center; /* Pusat vertikal */
+    min-height: 100vh; /* Memastikan konten ditengah bahkan jika sedikit konten */
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 1px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Media queries untuk tampilan responsif */
+
+/* Tampilan ponsel (lebar maksimum 767px) */
+@media (max-width: 767px) {
+    .login-container {
+        max-width: 90%; /* Lebar maksimum menjadi 90% */
+    }
+}
+
+/* Tampilan tablet (lebar antara 768px hingga 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login-container {
+        max-width: 70%; /* Lebar maksimum menjadi 70% */
+    }
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 130px; /* Mengubah padding tombol */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
